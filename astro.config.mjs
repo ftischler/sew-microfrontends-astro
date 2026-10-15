@@ -1,5 +1,13 @@
 // @ts-check
+import angular from '@analogjs/astro-angular';
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  integrations: [
+    angular({
+      vite: {
+        transformFilter: (_code, id) => id.includes('src/microfrontends'),
+      },
+    }),
+  ],
+});

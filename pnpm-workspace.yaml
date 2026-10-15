@@ -1,0 +1,16 @@
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  lmdb: true
+  msgpackr-extract: true
+minimumReleaseAgeExclude:
+  - '@analogjs/astro-angular@2.8.1'
+  - '@analogjs/vite-plugin-angular@2.8.1'
+  - '@angular/animations@22.2.3'
+  - '@angular/common@22.2.3'
+  - '@angular/compiler-cli@22.2.3'
+  - '@angular/compiler@22.2.3'
+  - '@angular/core@22.2.3'
+  - '@angular/language-service@22.2.3'
+  - '@angular/platform-browser@22.2.3'
+  - '@angular/platform-server@22.2.3'

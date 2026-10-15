@@ -1,0 +1,29 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Shell from '../../layouts/Shell.astro';
+import { remotes } from '../../remotes/remotes.ts';
+
+export const getStaticPaths = (() =>
+  remotes.mfe3.paths.map((path) => ({
+    params: { path: path || undefined },
+  }))) satisfies GetStaticPaths;
+
+const { exposedModule, register, tag, navigateEvent } = remotes.mfe3;
+---
+
+<Shell title="Microfrontend 3">
+  <remote-island
+    remote="mfe3"
+    exposed-module={exposedModule}
+    register={register}
+    tag={tag}
+    navigate-event={navigateEvent}
+    base-path="/mfe3"
+  >
+    <p>Loading mfe3 ...</p>
+  </remote-island>
+</Shell>
+
+<script>
+  import '../../remotes/remote-island.ts';
+</script>

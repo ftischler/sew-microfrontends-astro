@@ -9,9 +9,31 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest run",
+    "remotes:check": "node tools/check-remotes.ts",
+    "check": "astro check && tsc -p tools --noEmit"
   },
   "dependencies": {
-    "astro": "^7.3.8"
+    "@analogjs/astro-angular": "2.8.1",
+    "@angular/animations": "~22.2.3",
+    "@angular/common": "~22.2.3",
+    "@angular/compiler": "~22.2.3",
+    "@angular/core": "~22.2.3",
+    "@angular/platform-browser": "~22.2.3",
+    "@angular/platform-server": "~22.2.3",
+    "astro": "^7.3.8",
+    "rxjs": "~7.8.2",
+    "tslib": "^2.8.1"
+  },
+  "packageManager": "pnpm@12.11.2",
+  "devDependencies": {
+    "@angular/build": "~22.2.2",
+    "@angular/compiler-cli": "~22.2.3",
+    "@angular/language-service": "~22.2.3",
+    "@astrojs/check": "^0.9.10",
+    "@types/node": "^24.19.2",
+    "typescript": "~6.0.3",
+    "vitest": "^4.1.11"
   }
 }
